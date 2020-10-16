@@ -1,0 +1,77 @@
+.transition(@tr){
+	-webkit-transition: @tr;
+	-moz-transition: @tr;
+	-ms-transition: @tr;
+	transition: @tr;
+}
+@color: #5ba2a9;
+@color-form: #515151;
+.f-famely(@ff){
+	font-family: @ff, san-serif;}
+.befor(){content: '';
+	display: inline-block;
+	width: 1.5rem;
+	margin-bottom: 15px;
+	background-color: @color;}
+.style-form(){
+	color: @color-form;
+	font-size: 1.5rem;
+}
+@imgs: "../img/shared/feedback/";
+@style-icon: right 1.5rem center no-repeat;
+.bg-url(){
+	background-size: 2rem;}
+//-------------------------------//
+html{font-size: 10px}
+body{.f-famely(museo_reg)
+}
+section{padding: 4rem 0 8rem;}
+a:hover,a:focus,a:active{text-decoration: none;}
+button,input,a,textarea{
+	&:focus{outline: none;}
+}
+h1,h2,h3,h4,h5,h6,p{margin: 0;}
+.feedback-forms-all{
+	padding: 6rem 0 9rem;
+}
+.section-title{
+	margin-bottom: 6rem;text-align: center;text-transform: uppercase;
+	.f-famely(museo_bold);font-size: 3rem;color: #1b1b1b;
+	.upper-icon-wrapper::befor{.befor}	
+	.upper-icon-wrapper{&::after{.befor}
+	.uppear-icon{	margin-bottom: 1.5rem;width: 2rem;	height: 2rem;}
+	}
+}
+.feedback-form-statement{padding: 6rem 0 0;}
+.feedback-form-title {
+	margin-bottom: 6rem;text-align: center;
+	h3{.f-famely(museo_bold)}
+	p{font-size: 1.8rem;}
+}
+.feedback-form-input{
+	position: relative;
+	width: 100%;
+	padding: 1.4rem 4.5rem 1.4rem 1.4rem;
+	border: 2px solid #d0d0d0;
+	opacity:  .5;
+	color: #454545;
+	.transition(0.3);
+	&::-webkit-input-placeholder {.style-form};
+	&::-moz-placeholder {.style-form};
+	&::-ms-input-placeholder {.style-form};
+	&::hover, &::focus {opacity: 1;}
+}
+.feedback-form {
+	.input-user{
+		background: url("@{imgs}person-icon.svg")@style-icon;
+		.bg-url;}
+	.input-phone{.bg-url;background-image: url("@{imgs}telephone-icon.svg")@style-icon;}
+	&-btn{min-width: 100%; padding: 1.2rem 0;background-color: @color;
+		text-transform: uppercase;border: none;color:#ffffff;
+		font-size: 1.8rem;transition: 0.4s;
+		&::hover{background-color: #488389;  border-radius: 10px;}
+	}
+	.titel-feedback{display: block;} 
+	.description-feedback{display: block;}
+}
+
