@@ -1,3 +1,17 @@
+@font-face {
+	font-family: "SFProDisplay-Regular";
+	src: local("SFProDisplay-Regular"),
+		url(../fonts/SFProDisplay-Regular.woff) format("woff")
+		url(../fonts/SFProDisplay-Regular.woff2) format("woff2");
+	font-weight: normal;
+}
+@font-face {
+	font-family: "SFProDisplay-Semibold";
+	src: local("SFProDisplay-Semibold"),
+		url(../fonts/SFProDisplay-Semibold.woff) format("woff")
+		url(../fonts/SFProDisplay-Semibold.woff2) format("woff2");
+	font-weight: bold;
+}
 * {
   box-sizing: border-box;
 }
@@ -72,7 +86,7 @@ body {
 .search-input::-webkit-input-placeholder {
   color: #bfbfbf;
 }
-i.search-input:-ms-input-placeholder {
+.search-input:-ms-input-placeholder {
   color: #bfbfbf;
 }
 .search-input::-ms-input-placeholder {
@@ -83,12 +97,14 @@ i.search-input:-ms-input-placeholder {
 }
 .section {
 	max-width: 1200px;
-	margin: auto;	
+	width: 90%;
+	margin: auto;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;	
 }
 .posts {
-	max-width: 800px;
-	
-	margin-bottom: 30px;
+	width: 67%;	
 }
 .post {
 	background: #ffffff;
@@ -148,6 +164,9 @@ i.search-input:-ms-input-placeholder {
 	font-size: 14px;
 	line-height: 22px;
 	margin-right: 19px;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-block;
 }
 .author {
 	display: flex;
@@ -171,4 +190,153 @@ i.search-input:-ms-input-placeholder {
 	color: #BFBFBF;
 	font-size: 12px;
 	line-height: 20px;
+}
+.sidebar {
+	width: 31%;
+	
+	padding: 0;
+}
+.user {
+	padding: 15px 25px;
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid #E8E8E8;
+	background-color: #FAFAFA;
+	align-items: center;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.user-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.user-name {
+	font-size: 16px;
+	line-height: 24px;
+	color: #595959;
+}
+.icon-exit {
+	fill: 
+}
+.avatar {
+	border-radius: 50%;
+	margin-right: 17px;
+}
+.sidebar-nav {
+	background-color: #fff;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin-top: 4px;
+}
+.sidebar-menu {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	border: 1px solid #E8E8E8;
+	border-top: none;
+}
+.sidebar-menu-item {
+
+}
+.sidebar-menu-link {
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 22px;
+	color: #595959;
+	display: inline-block;
+	width: 100%;
+	padding: 16px 48px;
+}
+.sidebar-menu-link:hover {
+	background-color: #FFFBE6;
+	color: #FAAD14;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.sidebar-menu-link.active {
+	background-color: #FFFBE6;
+	border-right: 3px solid #FAAD14;
+	color: #FAAD14;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.button {
+	background-color: #FAAD14;
+	color: #FFFFFF;
+	text-decoration: none;
+	border-radius: 4px;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 13px;
+}
+.button-new-post {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 20px;	
+}
+.icon-fire {
+	height: 13px;
+	width: 11px;
+	margin-right: 10px;
+	fill: #fff;
+}
+.card {
+	background: #FFFFFF;
+	border: 1px solid #E8E8E8;
+	margin-top: 20px;
+}
+.card-header {	
+	background: #FAFAFA;
+	border-bottom: 1px solid #E8E8E8;
+	padding: 23px 25px;
+}
+.card-title {
+	font-size: 16px;
+	line-height: 24px;
+	color: #595959;
+	margin: 0;
+}
+.card-body {
+	padding: 22px 40px 20px 25px;
+}
+.card-body-title {
+	font-size: 16px;
+	line-height: 24px;
+	color: #D48806;
+	text-decoration: none;
+	margin: 0 0 10px;
+}
+.card-text {
+	font-size: 14px;
+	line-height: 22px;
+	color: #262626;	
+	margin: 10px 0;
+}
+.promo {
+	border-bottom: 1px solid #E8E8E8;
+	margin-top: 20px;
+	width: 100%;
+	height: 260px;
+	background-color: #fff;
+	background-image: url("../img/werbung.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+	border: 1px solid #E8E8E8;
+}
+.promo::before {
+	content: "Реклама";
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #C4C4C4;
+	font-size: 12px;
+	line-height: 20px;
+	color: #ffffff;
+	padding: 0 26px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.header-menu-link, .tag:hover {
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	;
 }
